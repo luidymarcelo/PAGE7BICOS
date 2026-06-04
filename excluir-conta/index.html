@@ -32,19 +32,41 @@
         <p>Se você ainda possui acesso ao app, abra <strong>Configurações &gt; Excluir minha conta</strong>. Essa é a forma mais rápida de excluir sua conta e os dados vinculados.</p>
       </div>
 
-      <h2>Solicitar exclusão sem acesso ao aplicativo</h2>
-      <ol>
-        <li>Use o botão abaixo para enviar a solicitação pelo mesmo e-mail utilizado na conta 7bicos.</li>
-        <li>No e-mail, informe claramente que deseja excluir permanentemente a conta.</li>
-        <li>A equipe poderá solicitar uma confirmação para validar que você é titular da conta.</li>
-        <li>Após a confirmação, a solicitação será processada em até 7 dias úteis.</li>
-      </ol>
+      <h2>Excluir sem acessar o aplicativo</h2>
+      <p>Informe o mesmo e-mail usado na conta 7bicos. Enviaremos um código para confirmar que você é titular da conta antes de excluir os dados.</p>
 
-      <p>
-        <a class="button danger" href="mailto:suportesetebicos@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20exclus%C3%A3o%20de%20conta%20-%207bicos&amp;body=Ol%C3%A1%2C%20equipe%207bicos.%0A%0ASolicito%20a%20exclus%C3%A3o%20permanente%20da%20minha%20conta%20e%20dos%20dados%20vinculados.%0A%0AE-mail%20cadastrado%3A%20%0A%0AEntendo%20que%20a%20exclus%C3%A3o%20%C3%A9%20permanente.">
-          Solicitar exclusão por e-mail
-        </a>
-      </p>
+      <section class="delete-flow" aria-label="Fluxo de exclusão automática">
+        <div class="delete-step">
+          <span>1</span>
+          <div>
+            <label for="account-email">E-mail cadastrado</label>
+            <input id="account-email" type="email" autocomplete="email" placeholder="seu@email.com">
+            <button class="button" id="send-code" type="button">Enviar código</button>
+          </div>
+        </div>
+
+        <div class="delete-step">
+          <span>2</span>
+          <div>
+            <label for="account-code">Código recebido por e-mail</label>
+            <input id="account-code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="9" placeholder="0000-0000">
+            <button class="button secondary" id="verify-code" type="button">Validar código</button>
+          </div>
+        </div>
+
+        <div class="delete-step">
+          <span>3</span>
+          <div>
+            <label class="checkbox-row">
+              <input id="confirm-delete" type="checkbox">
+              <span>Entendo que a exclusão é permanente e que os dados vinculados à conta serão apagados.</span>
+            </label>
+            <button class="button danger" id="delete-account" type="button" disabled>Excluir definitivamente</button>
+          </div>
+        </div>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </section>
 
       <div class="notice danger">
         <strong>Dados excluídos</strong>
@@ -55,8 +77,14 @@
       <p>Informações poderão ser mantidas somente quando existir obrigação legal, necessidade de exercício de direitos ou prevenção comprovada de fraude, pelo período estritamente necessário. Dados sem necessidade de conservação serão excluídos.</p>
 
       <h2>Precisa de ajuda?</h2>
-      <p>Entre em contato diretamente pelo e-mail <a href="mailto:suportesetebicos@gmail.com">suportesetebicos@gmail.com</a>.</p>
+      <p>Se não conseguir concluir o processo automático, envie a solicitação pelo mesmo e-mail cadastrado para <a href="mailto:suportesetebicos@gmail.com">suportesetebicos@gmail.com</a>.</p>
+      <p>
+        <a class="button secondary" href="mailto:suportesetebicos@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20exclus%C3%A3o%20de%20conta%20-%207bicos&amp;body=Ol%C3%A1%2C%20equipe%207bicos.%0A%0ASolicito%20a%20exclus%C3%A3o%20permanente%20da%20minha%20conta%20e%20dos%20dados%20vinculados.%0A%0AE-mail%20cadastrado%3A%20%0A%0AEntendo%20que%20a%20exclus%C3%A3o%20%C3%A9%20permanente.">
+          Solicitar ajuda por e-mail
+        </a>
+      </p>
     </article>
   </main>
+  <script src="../delete-account.js"></script>
 </body>
 </html>

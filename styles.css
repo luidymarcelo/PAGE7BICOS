@@ -213,6 +213,83 @@ p {
   background: #fff4f3;
 }
 
+.delete-flow {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.delete-step {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 18px;
+}
+
+.delete-step > span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+}
+
+.delete-step label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 750;
+}
+
+.delete-step input[type="email"],
+.delete-step input[type="text"] {
+  width: 100%;
+  min-height: 46px;
+  margin-bottom: 12px;
+  border: 1px solid #cfd8e5;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.checkbox-row {
+  display: grid !important;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: start;
+  color: var(--muted);
+  font-weight: 500 !important;
+}
+
+.checkbox-row input {
+  margin-top: 5px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.form-status {
+  min-height: 24px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.form-status.success {
+  color: #137333;
+}
+
+.form-status.error {
+  color: var(--danger);
+}
+
 ul,
 ol {
   padding-left: 22px;
