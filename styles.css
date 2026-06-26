@@ -168,9 +168,7 @@ p {
 }
 
 .hero-store-badge {
-  justify-content: center;
-  width: 100%;
-  margin-top: 18px;
+  margin: 18px auto 0;
 }
 
 .grid {
