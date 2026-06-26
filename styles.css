@@ -154,6 +154,23 @@ p {
   background: var(--danger);
 }
 
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  line-height: 0;
+}
+
+.store-badge img {
+  display: block;
+  width: 172px;
+  height: auto;
+}
+
+.hero-store-badge {
+  margin-top: 18px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -674,7 +691,7 @@ details p {
 }
 
 .footer-grid {
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: start;
   padding: 48px 0;
 }
@@ -688,6 +705,14 @@ details p {
 .footer-grid a {
   color: var(--muted);
   text-decoration: none;
+}
+
+.footer-store-badge {
+  margin-top: 2px;
+}
+
+.footer-store-badge img {
+  width: 150px;
 }
 
 .footer-logo {
