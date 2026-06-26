@@ -168,6 +168,7 @@ p {
 }
 
 .hero-store-badge {
+  display: flex;
   margin: 18px auto 0;
 }
 
